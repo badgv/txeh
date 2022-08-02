@@ -275,7 +275,7 @@ func (h *Hosts) RenderHostsFile() string {
 	hf := ""
 
 	for _, hfl := range h.hostFileLines {
-		hf = hf + fmt.Sprintln(lineFormatter(hfl))
+		hf = hf + fmt.Sprintf("%v\r\n",lineFormatter(hfl))
 	}
 
 	return hf
