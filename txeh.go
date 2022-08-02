@@ -278,7 +278,7 @@ func (h *Hosts) RenderHostsFile() string {
 		hf = hf + fmt.Sprintf("%v\r\n",lineFormatter(hfl))
 	}
 
-	return hf
+	return strings.Trim(hf,"\r\n")
 }
 
 // GetHostFileLines
